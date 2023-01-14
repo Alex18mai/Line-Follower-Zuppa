@@ -19,9 +19,9 @@ int m1Speed = 0;
 int m2Speed = 0;
 
 // PID kp ki kd
-float kp = 0.26;
-float ki = 0;  //0.00001;
-float kd = 2.55;
+float kp = 0.295;
+float ki = 0.000001; 
+float kd = 2.6;
 
 int p = 0;
 int i = 0;
@@ -32,7 +32,7 @@ int lastError = 0;
 
 const int maxSpeed = 255;
 const int minSpeed = -100;
-const int baseSpeed = 230;
+const int baseSpeed = 210;
 
 const int calibrateWindow = 5000;
 const int calibrationAddress = 0;
@@ -62,18 +62,23 @@ void setup() {
 
   setMotorSpeed(0, 0);
 
+  bool hasBeenCalibrated = false;
+
   // the user has 5 seconds to press the calibrate button
   while (millis() < calibrateWindow) {
     if (buttonPressed()) {
       calibrateQTR();
+      hasBeenCalibrated = true;
       break;
     }
   }
 
-  getCalibrateFromEEPROM();
+  if (!hasBeenCalibrated) {
+    getCalibrateFromEEPROM();
+  }
 
   setMotorSpeed(0, 0);
-  delay(100);
+  delay(500);
 }
 
 // function that gets the calibration configuration from EEPROM
@@ -140,10 +145,10 @@ bool buttonPressed() {
 
 // function that calibrates the QTR sensor
 void calibrateQTR() {
-  static const int totalCycles = 5;
-  static const int blackValueLimit = 600;
-  int calibrationSpeedLeft = -200;
-  int calibrationSpeedRight = 200;
+  static const int totalCycles = 4;
+  static const int blackValueLimit = 700;
+  int calibrationSpeedLeft = -190;
+  int calibrationSpeedRight = 190;
   int currentState = 1;
   int cycles = 0;
 
@@ -155,10 +160,13 @@ void calibrateQTR() {
 
     bool isBlack = false;
     for (int j = 0; j < sensorCount; j++) {
+      // Serial.print(sensorValues[j]);
+      // Serial.print(" ");
       if (sensorValues[j] > blackValueLimit) {
         isBlack = true;
       }
     }
+    // Serial.println();
 
     switch (currentState) {
       case GO_LEFT:
@@ -191,6 +199,9 @@ void calibrateQTR() {
         break;
     }
   }
+
+  qtr.calibrate();
+  qtr.read(sensorValues);
 
   saveCalibrateToEEPROM();
 
