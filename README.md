@@ -1,1 +1,3 @@
-# Line-Follower-Zuppa
+# IntroductionToRobotics: Line Follower - Zuppa
+
+IntroductionToRobotics: Final Project
