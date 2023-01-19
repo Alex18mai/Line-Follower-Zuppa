@@ -54,3 +54,5 @@ Given a kit with all the basic components and a boilerplate code, we needed to a
 - Breadboard - medium (400pts)
 - L293D motor driver
 - DC motors (2)
+- LED (2)
+- Wires and resistors per logic
