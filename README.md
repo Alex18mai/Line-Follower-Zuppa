@@ -1,11 +1,56 @@
 # IntroductionToRobotics: Line Follower - Zuppa
 
-IntroductionToRobotics: Final Project
+## Introduction
 
-# Picture of setup
+🔥 Zuppa 🔥 is the greatest line follower to ever exist. 
 
-![](https://github.com/IoanaLivia/Line-Follower-Zuppa/blob/main/Assets/PictureOfSetup.jpg)
+With features such as:
+- Automated calibration saved in EEPROM
+- Fine-tuned PID controller
+- Cool design
+- FLAMES!
+- Registration plate
+- Headlights
+- A lot of personality
+- Love ❤️
 
-# Video
+🔥 Zuppa 🔥 has dominated the dinosaur race (taking 14.7 seconds in training), but decided to let other participants have a chance by only scoring 16 seconds in the final presentation.
+
+## Picture of the setup
+
+<img src="https://github.com/Alex18mai/Line-Follower-Zuppa/blob/main/Assets/PictureOfSetup.jpg">
+
+## Picture of the team
+
+<img src="https://github.com/Alex18mai/Line-Follower-Zuppa/blob/main/Assets/PictureOfTeam.jpeg" width="500">
+
+Big thanks to [Dana](https://github.com/danadascalescu00) for taking the picture and for being an awesome teacher! We love you! ❤️
+
+## Video
 
 [![](https://img.youtube.com/vi/9MmQDpS1wKw/0.jpg)](https://youtu.be/9MmQDpS1wKw)
+
+## Task requirements
+
+Given a kit with all the basic components and a boilerplate code, we needed to assemble the car and fine-tune the PID controller.
+
+## Grading
+
+- Implement calibration with automatic motor movement
+- Follow a curved line (not exaggerated)
+- Finish the line follower course
+- Finish the line follower course in a fast manner with visible control (implementing P, D and maybe I)
+
+## Components
+- Arduino Uno
+- Zip-ties
+- Power source (can be of different shape). In our case, a LiPo battery
+- Wheels (2)
+- Wires for the line sensor (female - male)
+- QTR-8A reflectance sensor, along with screws
+- Ball caster
+- Extra wires from the kit or lab
+- Chassis
+- Breadboard - medium (400pts)
+- L293D motor driver
+- DC motors (2)
