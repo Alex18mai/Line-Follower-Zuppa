@@ -14,7 +14,7 @@ With features such as:
 - A lot of personality
 - Love ❤️
 
-🔥 Zuppa 🔥 has dominated the dinosaur race (taking 14.7 seconds in training), but decided to let other participants have a chance by only scoring 16 seconds in the final presentation.
+🔥 Zuppa 🔥 has dominated the dinosaur race (taking 14.7 seconds in training), but decided to let other participants have a chance by only scoring 15.96 seconds in the final presentation.
 
 ## Picture of the setup
 
