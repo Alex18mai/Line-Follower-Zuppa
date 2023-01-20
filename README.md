@@ -16,6 +16,12 @@ With features such as:
 
 🔥 Zuppa 🔥 has dominated the dinosaur race (taking 14.7 seconds in training), but decided to let other participants have a chance by only scoring 15.9 seconds in the final presentation.
 
+## Our strategy
+
+- We have implemented the calibration as a state machine based on the raw read information of the sensor.
+- The configuration is saved in EEPROM and loaded each time. In order to start a new calibration we have added a button on the front of the robot for this.
+- We have fine-tuned the PID by doing runs on the test tracks. The PID is based on the value of the readLineBlack function.
+
 ## Picture of the setup
 
 <img src="https://github.com/Alex18mai/Line-Follower-Zuppa/blob/main/Assets/PictureOfSetup.jpg">
