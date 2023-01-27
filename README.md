@@ -20,7 +20,7 @@ With features such as:
 
 - We have implemented the calibration as a state machine based on the raw read information of the sensor.
 - The configuration is saved in EEPROM and loaded each time. In order to start a new calibration we have added a button on the front of the robot for this.
-- We have fine-tuned the PID by doing runs on the test tracks. The PID is based on the value of the readLineBlack function and on the P and D values, but we also used a small value for I which helped Zuppa run a little faster after a few continuous tracks.
+- We have fine-tuned the PID by doing runs on the test tracks. The PID is mostly based on the value of the readLineBlack function and on the P and D values, but we also used a small value for I which helped Zuppa run a little faster after a few continuous tracks.
 
 ## Picture of the setup
 
